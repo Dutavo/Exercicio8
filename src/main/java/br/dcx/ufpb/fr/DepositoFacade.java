@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.*;
 
-public class Deposito implements BebidasInterface {
+public class DepositoFacade implements BebidasInterface {
     private Map<String, Bebidas> bebidas;
     private GravadorDeDados gravador;
 
 
-    public Deposito(){
+    public DepositoFacade(){
         try {
             this.bebidas = new HashMap<>();
             this.gravador= new GravadorDeDados();

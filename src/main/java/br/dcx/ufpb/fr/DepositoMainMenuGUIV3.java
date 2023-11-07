@@ -11,7 +11,7 @@ public class DepositoMainMenuGUIV3 extends JFrame {
     JLabel linha1, linha2;
     ImageIcon LogoLcc = new ImageIcon("./src/main/resources/logoBlack.png");
 
-    Deposito deposito;
+    DepositoFacade deposito;
     JMenuBar barraDeMenu = new JMenuBar();
 
     int mensagem = LogoEntrace.showMensage();
@@ -26,7 +26,7 @@ public class DepositoMainMenuGUIV3 extends JFrame {
         setLocation(400, 400);
         setResizable(true);
         getContentPane().setBackground(Color.darkGray);
-        deposito = new Deposito();
+        deposito = new DepositoFacade();
         gravaBebidas = new ControllerDepositRecorder(deposito, this);
 
         linha1 = new JLabel(" ", JLabel.CENTER);

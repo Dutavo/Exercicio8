@@ -8,7 +8,7 @@ import java.io.File;
 public class TestaDeposito {
     @Test
     public void TestaCasdastroDeposito() {
-        Deposito depositoLcc = new Deposito();
+        DepositoFacade depositoLcc = new DepositoFacade();
         try {
             depositoLcc.cadastraBebidas("Ice", 5.0, 10);
         } catch (ExceptionBebidaJaCadastrada e) {
@@ -24,7 +24,7 @@ public class TestaDeposito {
 
     @Test
     public void TestaPesquisaBebidas() {
-        Deposito depositoLcc = new Deposito();
+        DepositoFacade depositoLcc = new DepositoFacade();
         try {
             depositoLcc.cadastraBebidas("Cerveja", 3.50, 10);
             depositoLcc.cadastraBebidas("Vinho", 30.00, 15);
@@ -40,7 +40,7 @@ public class TestaDeposito {
     }
     @Test
     public void TestaListarBebidas(){
-        Deposito depositoLcc= new Deposito();
+        DepositoFacade depositoLcc= new DepositoFacade();
         assertEquals(0,depositoLcc.listarBebidas().size());
         try{
             depositoLcc.cadastraBebidas("Matuta", 15.00, 5);
@@ -57,7 +57,7 @@ public class TestaDeposito {
         if(f.exists()){
             f.delete();
         }
-        Deposito depositoLcc= new Deposito();
+        DepositoFacade depositoLcc= new DepositoFacade();
         try {
             depositoLcc.cadastraBebidas("Vinho Tinto", 45.00, 10);
             depositoLcc.salvarAsBebidas();
@@ -72,7 +72,7 @@ public class TestaDeposito {
     }
     @Test
     public void TestRemoverBebidas() {
-        Deposito depositoLcc = new Deposito();
+        DepositoFacade depositoLcc = new DepositoFacade();
         try {
             depositoLcc.cadastraBebidas("Vinho Branco", 80.00, 20);
             depositoLcc.cadastraBebidas("Whisky Royal Salutte", 250.00, 10);
